@@ -13,48 +13,50 @@ copyright: wanggsh
 # Configuration
 theme:
   name: material
+  logo: assets/website_icon1.png
+  favicon: assets/website_icon1.png
   custom_dir: material/overrides
   features:
-    - announce.dismiss
+    #- announce.dismiss
     - content.action.edit
     - content.action.view
     - content.code.annotate
     - content.code.copy
-    # - content.tabs.link
+    # # - content.tabs.link
     - content.tooltips
-    # - header.autohide
-    # - navigation.expand
+    #- header.autohide
+    - navigation.expand
     - navigation.footer
     - navigation.indexes
-    # - navigation.instant
+    - navigation.instant
     # - navigation.prune
-    - navigation.sections
+    # - navigation.sections
+    - navigation.path
     - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
-    - toc.follow
+    # - toc.follow
     # - toc.integrate
   palette:
     - scheme: default
-      primary: black
-      accent: black
+      primary: #white
+      accent: #white
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: #388e3c
-      accent: #388e3c
+      primary: black
+      accent: black
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
   icon:
     logo: logo
 
@@ -85,49 +87,43 @@ extra:
 
 # Extensions
 markdown_extensions:
-  - abbr
   - admonition
+  - abbr
   - attr_list
   - def_list
   - footnotes
+  - meta
   - md_in_html
-  - toc:
-      permalink: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
+  - codehilite
+  - pymdownx.critic
   - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
   - pymdownx.keys
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
   - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.inlinehilite
   - pymdownx.smartsymbols
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tilde
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      # insert a blank space before the character
+      permalink: " ¶"
 
 # Page tree
 nav:
   - Home: index.md
 
-  #- Getting started:
-  #- Setup:
+  - Learn: 
+    - z2m-pytorch :
+      - chacpter00 : 00_pytorch_foundmental.ipynb
+      - chacpter01 : "01_pytorch_workflow.ipynb"
+    - MKdoc: 
+      - file : 123.md
+
