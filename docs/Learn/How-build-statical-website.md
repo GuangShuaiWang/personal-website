@@ -27,6 +27,8 @@
 ### Github pages
 文档中给出了详细的[步骤](https://squidfunk.github.io/mkdocs-material/publishing-your-site/){:target="_blank"},主要是根据github action来进行自动的部署，需要注意的额外的内容是要根据自己的所安装的插件(plugin)来修改yml文件。
 
+这里多写一点：直观的感觉github action会是一个非常有用且便利的方式，有机会的话可以去学习一下。
+
 ### 域名解析
 在购买好域名之后，只需样相互理解解析就可以了，有详细的[教程](https://www.jianshu.com/p/d92ea8542673){:target="_blank"}。
 
