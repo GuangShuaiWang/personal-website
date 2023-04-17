@@ -1,5 +1,5 @@
 site_name: Heiqihuolin website
-site_url: #www.wanggsh.cn
+site_url: http://www.wanggsh.cn
 site_author: Wangguangshuai
 site_description: >-
   Show me!
@@ -121,9 +121,9 @@ nav:
   - Home: index.md
 
   - Learn: 
+    - Overview : Learn/learn_homepage.md
     - z2m-pytorch :
-      - chacpter00 : 00_pytorch_foundmental.ipynb
-      - chacpter01 : "01_pytorch_workflow.ipynb"
-    - MKdoc: 
-      - file : 123.md
+      - chacpter00 : "Learn/z2m-pytorch/00_pytorch_foundmental.ipynb"
+      - chacpter01 : "Learn/z2m-pytorch/01_pytorch_workflow.ipynb"
+    - MKdoc: "Learn/How-build-statical-website.md"
 
