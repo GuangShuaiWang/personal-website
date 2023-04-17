@@ -56,6 +56,10 @@ template: home.html
 ### mkdocs.yml中的feature元素
 该元素是对页面的展示进行定制化调整，详细的[内容](https://squidfunk.github.io/mkdocs-material/blog/2021/12/27/the-past-present-and-future/?h=feature#features){:target="_blank"}在这里.
 
+### change log的构建
+
+好像可以自动同步每次提交的变化，
+
 ## 踩坑
 
 ### 报错信息：
@@ -72,4 +76,13 @@ template: home.html
 解答：https://github.com/squidfunk/mkdocs-material/issues/818#issuecomment-629646709
 
 主要原因就是mkdocs只从h2标题开始抓取制作table of content，因此在使用的时候，h1标题只使用一个，后续多用h2的标题。
+
+### github pages错误
+最开始直接成功构建了页面，但是在第二次提交之后，页面构建失败了，
+可能原因是
+1.没有等待一会
+2.代码内容有错误。
+发现好像是safri的问题，自动把pages同步到我的域名，而我的域名被重新提交仓库导致取消，然后就404了。
+
+重新提交仓库之后，自定义的域名取消了，问题出现在哪里？
 
