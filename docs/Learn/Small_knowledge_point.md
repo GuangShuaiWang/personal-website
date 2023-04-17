@@ -46,6 +46,9 @@ git init #（初始化项目）
 git clone [url] #克隆到远程仓库
 ```
 
+#### Github push
+Github删除掉了通过账号密码的方式进行push，转而使用token的方式，这里需要生成token，并且在输入密码时，选择通过token进行登陆。
+
 ### pip的镜像网址
 
 - 中国科学技术大学 : https://pypi.mirrors.ustc.edu.cn/simple
