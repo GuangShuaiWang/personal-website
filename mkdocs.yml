@@ -127,4 +127,5 @@ nav:
       - chacpter00 : "Learn/z2m-pytorch/00_pytorch_foundmental.ipynb"
       - chacpter01 : "Learn/z2m-pytorch/01_pytorch_workflow.ipynb"
     - MKdoc: "Learn/How-build-statical-website.md"
+    - Git : "Learn/git.md"
 
