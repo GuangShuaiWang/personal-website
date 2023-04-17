@@ -22,3 +22,13 @@ jobs:
       - run: pip install pillow cairosvg
       - run: pip install mkdocs-minify-plugin
       - run: mkdocs gh-deploy --force
+
+      - name: Deploy to Custom Domain
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: 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
+          external_repository: GuangShuaiWang/personal-website
+          publish_dir: ./site
+          cname: wanggsh.cn
+          target_branch: gh-pages
+          commit_message: 'Deploy to custom domain'

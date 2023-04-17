@@ -28,7 +28,7 @@
 文档中给出了详细的[步骤](https://squidfunk.github.io/mkdocs-material/publishing-your-site/){:target="_blank"},主要是根据github action来进行自动的部署，需要注意的额外的内容是要根据自己的所安装的插件(plugin)来修改yml文件。
 
 ### 域名解析
-在购买好域名之后，只需样相互理解解析就可以了，有详细的[教程](https://blog.csdn.net/Jasons_xie/article/details/80899044){:target="_blank"}。
+在购买好域名之后，只需样相互理解解析就可以了，有详细的[教程](https://www.jianshu.com/p/d92ea8542673){:target="_blank"}。
 
 ## customization：
 
@@ -85,4 +85,17 @@ template: home.html
 发现好像是safri的问题，自动把pages同步到我的域名，而我的域名被重新提交仓库导致取消，然后就404了。
 
 重新提交仓库之后，自定义的域名取消了，问题出现在哪里？
+
+通过询问chtagpt找到了解决方案，在Github action中添加相应的代码，让每次workflow中都自定定于到特定域名上：
+```
+- name: Deploy to Custom Domain
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }} #调用token
+          external_repository: GuangShuaiWang/personal-website
+          publish_dir: ./site
+          cname: wanggsh.cn
+          target_branch: gh-pages
+          commit_message: 'Deploy to custom domain'
+```
 
