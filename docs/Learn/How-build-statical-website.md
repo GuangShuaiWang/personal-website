@@ -101,3 +101,4 @@ template: home.html
           commit_message: 'Deploy to custom domain'
 ```
 
+其中的secrets.PERSONAL_TOKEN要在github的主页Settings/Developer settings上生成，并将生成的token放在对应仓库的setting/secrets and variables里，名称为PERSONAL_TOKEN。
