@@ -22,7 +22,7 @@ jobs:
       - run: pip install pillow cairosvg
       - run: pip install mkdocs-minify-plugin
       - run: mkdocs gh-deploy --force
-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
+
       - name: Deploy to Custom Domain
         uses: peaceiris/actions-gh-pages@v3
         with:
