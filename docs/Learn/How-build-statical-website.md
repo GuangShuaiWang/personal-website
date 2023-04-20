@@ -9,11 +9,11 @@
 
 最开始是基于[sphinx](https://www.sphinx-doc.org/en/master/)，但是有点反人类（反我）的是，它的语法是基于[restrueturetext](https://docutils.sourceforge.io/rst.html)，要学新的语法，更麻烦。
 
-后来在找pytorch的学习资料时，发现了一个非常好的的[文档](https://www.learnpytorch.io)，这个文档也同时可以读取jupyter notebook的信息，非常符合我的需求，经过[询问](https://github.com/mrdbourke/pytorch-deep-learning/discussions/395)了解到了[MKdocs](https://squidfunk.github.io/mkdocs-material/)。
+后来在找pytorch的学习资料时，发现了一个非常好的的[文档](https://www.learnpytorch.io)，这个文档也同时可以读取jupyter notebook的信息，非常符合我的需求，经过[询问](https://github.com/mrdbourke/pytorch-deep-learning/discussions/395)了解到了[MKdocs](https://www.mkdocs.org)。
 
 ### 快速开始
 
-这里我们主要是基于MKdocs的一个主题：mkdocs-material，它会自动安装所有的依赖，包括最主要的MKdocs。
+这里我们主要是基于MKdocs的一个主题：[mkdocs-material](https://squidfunk.github.io/mkdocs-material/)，它会自动安装所有的依赖，包括最主要的MKdocs。
 
 ```pip install mkdocs-material```.
 
@@ -53,7 +53,7 @@ template: home.html
 
 
 ### 更改图标
-图标更改需要放到docs的assets文件夹下，并且要在mkdocs.yml中指定路径。
+图标更改需要放到docs的assets文件夹下，并且要在mkdocs.yml中指定路径。图标绘制可以选择在线网站，例如[favicon.io](https://favicon.io)。
 
 ### mkdocs.yml中的feature元素
 该元素是对页面的展示进行定制化调整，详细的[内容](https://squidfunk.github.io/mkdocs-material/blog/2021/12/27/the-past-present-and-future/?h=feature#features){:target="_blank"}在这里.
@@ -84,11 +84,12 @@ template: home.html
 可能原因是
 1.没有等待一会
 2.代码内容有错误。
+
 发现好像是safri的问题，自动把pages同步到我的域名，而我的域名被重新提交仓库导致取消，然后就404了。
 
-重新提交仓库之后，自定义的域名取消了，问题出现在哪里？
+重新提交仓库之后，自定义的域名取消了，如何自动同步呢？
 
-通过询问chtagpt找到了解决方案，在Github action中添加相应的代码，让每次workflow中都自定定于到特定域名上：
+通过询问chtagpt找到了解决方案，在Github action中添加相应的代码，让每次workflow中都自定于到特定域名上：
 ```
 - name: Deploy to Custom Domain
         uses: peaceiris/actions-gh-pages@v3

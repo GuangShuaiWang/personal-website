@@ -12,6 +12,4 @@
 5. bashrc中的前缀显示可以按照自己的需求更改，主要改PS1参数，示例：```expert PS1='\[\033[42m\]\[\033[1;37m\][\d \t]\[\033[0m\] \[\033[1;30m\]\u\[\033[0m\]:\[\033[1;34m\]\w\[\033[0m\]\$ '```
 6. chatgpt网址：https://chat.openai.com
 
-![test](https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg?t=1668125812)
-
 
