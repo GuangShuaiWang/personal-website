@@ -6,7 +6,6 @@ import datetime
 
 print(os.getcwd())
 API_KEY = os.environ["API_KEY"]
-API_KEY = '71D5FE392805FE762FFFCC3B9C79D5F9'
 STEAM_ID = '76561198447352948'
 GAME_LIBRARY_URL = 'https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/'
 
@@ -39,7 +38,7 @@ for i in game_id:
     game_name.append(name)
     header_image_url = data[str(APP_ID)]['data']['header_image']
     response = requests.get(header_image_url)
-    with open(f'./docs/doc_images/steam/{APP_ID}.jpg', 'wb') as f:
+    with open(f'docs/doc_images/steam/{APP_ID}.jpg', 'wb') as f:
         f.write(response.content)
     figure_path.append("![](\"../doc_images/steam/{}.jpg\")".format(name))
 
@@ -58,5 +57,5 @@ def time_change(rtime_last_played):
 df["Last Played Time"] = df["Last Played Time"].map(time_change)
 df = df[df["Game time"] > 10].reset_index(drop=True)
 md_table = df.to_markdown()
-with open('./docs/hobby/steam.md', 'w') as f:
+with open('docs/hobby/steam.md', 'w') as f:
     f.write(md_table)
