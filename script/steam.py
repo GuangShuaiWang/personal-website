@@ -4,7 +4,7 @@ import time
 import pandas as pd
 import datetime
 
-os.chdir(os.path.join(os.path.dirname(__file__),".."))
+print(os.getcwd())
 API_KEY = os.environ["API_KEY"]
 API_KEY = '71D5FE392805FE762FFFCC3B9C79D5F9'
 STEAM_ID = '76561198447352948'
