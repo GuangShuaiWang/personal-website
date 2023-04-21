@@ -129,3 +129,7 @@ nav:
     - MKdoc: "Learn/How-build-statical-website.md"
     - Git : "Learn/git.md"
 
+  # - Academic:
+
+  - Hobby:
+    - game : "hobby/steam.md"

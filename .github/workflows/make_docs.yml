@@ -17,11 +17,20 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-material
-      - run: pip install mkdocs-jupyter
-      - run: pip install pillow cairosvg
-      - run: pip install mkdocs-minify-plugin
-      - run: mkdocs gh-deploy --force
+      - name: Run script
+        env : 
+          API_KEY: ${{ secrets.STEAM_API }}
+        run: |
+          pip install requests
+          pip install pandas
+          python ./script/steam.py
+      - name: mkdocs
+        run: |
+          pip install mkdocs-material
+          pip install mkdocs-jupyter
+          pip install pillow cairosvg
+          pip install mkdocs-minify-plugin
+          mkdocs gh-deploy --force
 
       - name: Deploy to Custom Domain
         uses: peaceiris/actions-gh-pages@v3
