@@ -5,7 +5,6 @@ import pandas as pd
 import datetime
 
 
-print(os.listdir())
 API_KEY = os.environ["API_KEY"]
 STEAM_ID = '76561198447352948'
 GAME_LIBRARY_URL = 'https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/'
