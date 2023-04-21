@@ -37,8 +37,8 @@ for i in game_id:
     game_name.append(name)
     header_image_url = data[str(APP_ID)]['data']['header_image']
     response = requests.get(header_image_url)
-    #with open(f'./docs/doc_images/steam/{APP_ID}.jpg', 'wb') as f:
-        #f.write(response.content)
+    with open(f'../docs/doc_images/steam/{APP_ID}.jpg', 'wb') as f:
+        f.write(response.content)
     figure_path.append("![](\"./docs/doc_images/steam/{}.jpg\")".format(name))
 
 df = pd.DataFrame(
