@@ -23,6 +23,7 @@ jobs:
         run: |
           pip install requests
           pip install pandas
+          pip install tabulate
           python ./script/steam.py
       - name: mkdocs
         run: |
