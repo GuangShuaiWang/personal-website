@@ -56,5 +56,5 @@ def time_change(rtime_last_played):
 df["Last Played Time"] = df["Last Played Time"].map(time_change)
 df = df[df["Game time"] > 10].reset_index(drop=True)
 md_table = df.to_markdown()
-with open('./docs/hobby/steam.md', 'w') as f:
+with open('../docs/hobby/steam.md', 'w') as f:
     f.write(md_table)
