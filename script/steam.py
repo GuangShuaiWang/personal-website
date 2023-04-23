@@ -63,4 +63,5 @@ md_table = df.to_markdown()
 with open('docs/hobby/steam.md', 'w') as f:
     f.write("# Steam Game time\n")
     f.write("Note: 下表是自动抓取的steam的游戏时间，过滤删除了只打开一会会的游戏（小于10min）\n")
+    f.write("\n")
     f.write(md_table)
