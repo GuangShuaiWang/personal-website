@@ -45,7 +45,7 @@ for i in game_id:
 df = pd.DataFrame(
     {"Game figure":figure_path,
       "Game name":game_name,
-     "Game time":game_time,
+     "Game time(min)":game_time,
      "Last Played Time":game_finnaly_play,
      }
 )
@@ -56,6 +56,11 @@ def time_change(rtime_last_played):
   return date_str
 df["Last Played Time"] = df["Last Played Time"].map(time_change)
 df = df[df["Game time"] > 10].reset_index(drop=True)
+df = df.sort_values("Game time",ascending=False).reset_index(drop=True)
 md_table = df.to_markdown()
+
+
 with open('docs/hobby/steam.md', 'w') as f:
+    f.write("# Steam Game time\n")
+    f.writa("Note: 下表是自动抓取的steam的游戏时间，过滤删除了只打开一会会的游戏（小于10min）\n")
     f.write(md_table)
