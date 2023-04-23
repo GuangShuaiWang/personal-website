@@ -45,7 +45,7 @@ for i in game_id:
 df = pd.DataFrame(
     {"Game figure":figure_path,
       "Game name":game_name,
-     "Game time(min)":game_time,
+     "Game time":game_time,
      "Last Played Time":game_finnaly_play,
      }
 )
@@ -56,6 +56,11 @@ def time_change(rtime_last_played):
   return date_str
 df["Last Played Time"] = df["Last Played Time"].map(time_change)
 df = df[df["Game time"] > 10].reset_index(drop=True)
+def m2h(mins):
+    m = mins % 60
+    h = min //60
+    return("{}h {}min".format(h,m))
+df['Game time'] = df['Game time'].map(m2h)
 df = df.sort_values("Game time",ascending=False).reset_index(drop=True)
 md_table = df.to_markdown()
 
