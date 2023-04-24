@@ -43,7 +43,7 @@ theme:
     # - toc.integrate
   palette:
     - scheme: default
-      primary: #white
+      primary: white
       accent: #white
       toggle:
         icon: material/brightness-7
@@ -121,13 +121,15 @@ nav:
   - Home: index.md
 
   - Learn: 
-    - Overview : Learn/learn_homepage.md
+    - Overview : "Learn/learn_homepage.md"
     - knowledage : "Learn/Small_knowledge_point.md"
     - z2m-pytorch :
       - chacpter00 : "Learn/z2m-pytorch/00_pytorch_foundmental.ipynb"
       - chacpter01 : "Learn/z2m-pytorch/01_pytorch_workflow.ipynb"
+      - chacpter02 : "Learn/z2m-pytorch/02_pytorch_classification.ipynb"
     - MKdoc: "Learn/How-build-statical-website.md"
     - Git : "Learn/git.md"
+    - Steam : "Learn/Steam_game.md"
 
   # - Academic:
 
