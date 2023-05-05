@@ -50,13 +50,19 @@ df = pd.DataFrame(
      }
 )
 
+df = df[df["Game time"] > 10].reset_index(drop=True)
+df = df.sort_values(by = ["Game time","Last Played Time"],ascending=[False,False]).reset_index(drop=True)
+
 def time_change(rtime_last_played):
   dt = datetime.datetime.fromtimestamp(rtime_last_played)
   date_str = dt.strftime('%Y-%m-%d %H:%M:%S')
   return date_str
 df["Last Played Time"] = df["Last Played Time"].map(time_change)
-df = df[df["Game time"] > 10].reset_index(drop=True)
-df = df.sort_values("Game time",ascending=False).reset_index(drop=True)
+def min2hour(mins):
+    h = mins//60
+    m = mins%60
+    return "{} hours {} mins".format(h,m)
+df["Game time"] = df["Game time"].map(min2hour)
 md_table = df.to_markdown()
 
 
