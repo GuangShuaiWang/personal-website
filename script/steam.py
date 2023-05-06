@@ -51,7 +51,7 @@ df = pd.DataFrame(
 )
 
 df = df[df["Game time"] > 10].reset_index(drop=True)
-df = df.sort_values(by = ["Game time","Last Played Time"],ascending=[False,False]).reset_index(drop=True)
+df = df.sort_values(by = ["Last Played Time","Game time"],ascending=[False,False]).reset_index(drop=True)
 
 def time_change(rtime_last_played):
   dt = datetime.datetime.fromtimestamp(rtime_last_played)
