@@ -134,5 +134,5 @@ nav:
 
   # - Academic:
 
-  - Hobby:
-    - game : "hobby/steam.md"
+  # - Hobby:
+    # - game : "hobby/steam.md"
