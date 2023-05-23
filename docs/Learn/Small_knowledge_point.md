@@ -13,5 +13,6 @@
 6. chatgpt网址：[chatgpt](https://chat.openai.com){:target="_blank"}
 7. torch.manual_seed(3407) is all you need?
 8. 转博ppt：[Epan](https://epan.shanghaitech.edu.cn/l/ZFDjOk){:target="_blank"} 一天有效期
+9. 表格图片在线制作：https://www.canva.cn。 目前好像比不好用
 
 
