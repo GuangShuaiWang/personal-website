@@ -14,5 +14,8 @@
 7. torch.manual_seed(3407) is all you need?
 8. 转博ppt：[Epan](https://epan.shanghaitech.edu.cn/l/ZFDjOk){:target="_blank"} 一天有效期
 9. 表格图片在线制作：https://www.canva.cn。 目前好像比不好用
-
-
+10. axs.flatten() 拉平轴线
+11. next()函数在处理迭代器或可迭代对象时非常有用。它可以让我们逐个访问元素，而不需要显式地使用for循环或将所有元素加载到内存中。它特别适用于处理大型数据集或需要按需获取数据的情况。
+12. iter()函数的工作原理如下：如果iterable本身已经是一个迭代器对象，iter()函数会直接返回它自己，否则，它会调用可迭代对象的__iter__()方法，返回一个新的迭代器对象。
+13. torch.randint(start,end,size) 其中size是输出的张量形状；squeeze是压缩向量，降低纬度，相反的操作是upsqueeze。
+14. batch_normalization 是样本之间进行标准化，layer_normalization是样本自身进行标准化
