@@ -19,3 +19,8 @@
 12. iter()函数的工作原理如下：如果iterable本身已经是一个迭代器对象，iter()函数会直接返回它自己，否则，它会调用可迭代对象的__iter__()方法，返回一个新的迭代器对象。
 13. torch.randint(start,end,size) 其中size是输出的张量形状；squeeze是压缩向量，降低纬度，相反的操作是upsqueeze。
 14. batch_normalization 是样本之间进行标准化，layer_normalization是样本自身进行标准化
+15. tensor.view()可以改变张量形状,其中的-1表示有计算觉得维度，.transpose()转置，可以交换维度
+16. scores.masked_fill(mask == 0, float('-inf')) 将score中为0的数值，替换为负无穷，经过softmax会变为0.
+17. Transformer详细的梳理[文章](http://nlp.seas.harvard.edu/2018/04/03/attention)
+18. torch中只要是模型运行，就一定是调用forward方法，输入要符合forward结构
+19. Dropout的原理是将某些神经原失活，其实现方式是将输出的某些位置的向量变成0.
