@@ -12,7 +12,6 @@
 5. bashrc中的前缀显示可以按照自己的需求更改，主要改PS1参数，示例：```expert PS1='\[\033[42m\]\[\033[1;37m\][\d \t]\[\033[0m\] \[\033[1;30m\]\u\[\033[0m\]:\[\033[1;34m\]\w\[\033[0m\]\$ '```
 6. chatgpt网址：[chatgpt](https://chat.openai.com){:target="_blank"}
 7. torch.manual_seed(3407) is all you need?
-8. 转博ppt：[Epan](https://epan.shanghaitech.edu.cn/l/ZFDjOk){:target="_blank"} 一天有效期
 9. 表格图片在线制作：https://www.canva.cn。 目前好像比不好用
 10. axs.flatten() 拉平轴线
 11. next()函数在处理迭代器或可迭代对象时非常有用。它可以让我们逐个访问元素，而不需要显式地使用for循环或将所有元素加载到内存中。它特别适用于处理大型数据集或需要按需获取数据的情况。
@@ -24,3 +23,10 @@
 17. Transformer详细的梳理[文章](http://nlp.seas.harvard.edu/2018/04/03/attention)
 18. torch中只要是模型运行，就一定是调用forward方法，输入要符合forward结构
 19. Dropout的原理是将某些神经原失活，其实现方式是将输出的某些位置的向量变成0.
+20. Jupyter中增加kernel：`Ipython kernel install --user --name=kernel_name`. `--user`表示当前用户，`--name`制定安装的名称。
+21. `jupyter-lab --no-browser --ip "" --port 00000` 固定IP和端口，提前设置密码（jupyter server password）
+22. MPI和OpenMPI是用于高性能服务器之间进行信息交互的。
+23. `hostname -I` 可以显示当前服务器的IP.
+24. salloc命令交互模式申请资源`salloc --job-name=test --nodes=1 --gres=gpu:2 --partition=AI4Molecule --quotatype=reserved`，`srun --jobid=<jobid> --pty bash`进入申请的资源。
+25. 
+
